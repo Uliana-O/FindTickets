@@ -8,9 +8,11 @@ public class TicketManager {
     public TicketManager(TicketRepository repository) {
         this.repository = repository;
     }
+
     public void add(Ticket product) {
         repository.add(product);
     }
+
     public Ticket[] findAll(String from, String to) {
         Ticket[] result = new Ticket[0];
         for (Ticket ticket : repository.findAll()) {
